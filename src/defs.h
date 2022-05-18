@@ -1,6 +1,8 @@
 #ifndef DEFS_H_
 #define DEFS_H_
 
+#include "bb.h"
+
 // use this to index bitboard
 enum {
     A8, B8, C8, D8, E8, F8, G8, H8,
@@ -25,5 +27,10 @@ enum {
     FILES = 8,
     RANKS = 8
 };
+
+const U64 NOT_A_FILE;
+const U64 NOT_AB_FILE;
+const U64 NOT_H_FILE;
+const U64 NOT_GH_FILE;
 
 #endif
