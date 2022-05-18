@@ -14,7 +14,6 @@ void set_bit(U64* bitboard, int square) {
 }
 
 void pop_bit(U64* bitboard, int square) {
-    // bit must be set to be popped
     assert(test_bit(*bitboard, square));
     *bitboard ^= 1ULL << square;
 }
@@ -32,7 +31,7 @@ int get_file(int square) {
 }
 
 void print_bitboard(U64 bitboard) {
-    // lsb: a8, msb: h1
+    /* lsb: a8, msb: h1 */
     for (int rank = 0; rank < RANKS; rank++) {
         for (int file = 0; file < FILES; file++) {
             if (!file) {
@@ -42,8 +41,9 @@ void print_bitboard(U64 bitboard) {
         }
         printf("\n");
     }
+
     printf("\n");
     printf("      a  b  c  d  e  f  g  h");
     printf("\n\n");
-    printf("Bitboard: %llu \n\n", bitboard);
+    printf("Bitboard: 0x%llX \n\n", bitboard);
 }
