@@ -17,7 +17,7 @@ enum {
 
 enum {FILE_A, FILE_B, FILE_C, FILE_D, FILE_E, FILE_F, FILE_G, FILE_H};
 
-enum {RANK_1, RANK_2, RANK_3, RANK_4, RANK_5, RANK_6, RANK_7, RANK_8};
+enum {RANK_8, RANK_7, RANK_6, RANK_5, RANK_4, RANK_3, RANK_2, RANK_1};
 
 enum {WHITE, BLACK};
 
@@ -27,10 +27,5 @@ enum {
     FILES = 8,
     RANKS = 8
 };
-
-const U64 NOT_A_FILE;
-const U64 NOT_AB_FILE;
-const U64 NOT_H_FILE;
-const U64 NOT_GH_FILE;
 
 #endif

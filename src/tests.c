@@ -30,11 +30,17 @@ static void test_pop_bit() {
     set_bit(&test_board, E4);
     set_bit(&test_board, A8);
     set_bit(&test_board, H1);
-    assert (test_board != 0);
+    assert(test_board != 0);
     pop_bit(&test_board, E4);
     pop_bit(&test_board, A8);
     pop_bit(&test_board, H1);
     assert(test_board == 0);
+}
+
+static void test_get_square_number() {
+    assert(get_square_number(RANK_4, FILE_E) == E4);
+    assert(get_square_number(RANK_8, FILE_A) == A8);
+    assert(get_square_number(RANK_1, FILE_H) == H1);
 }
 
 static void test_pawn_east_attacks() {
@@ -83,6 +89,7 @@ static void run_bb_tests() {
     test_set_bit();
     test_test_bit();
     test_pop_bit();
+    test_get_square_number();
     printf("Passing bitboard tests...\n");
 }
 

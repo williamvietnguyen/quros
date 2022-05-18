@@ -6,6 +6,11 @@ U64 west_pawn_attacks[COLORS][NUM_SQ];
 U64 east_pawn_attacks[COLORS][NUM_SQ];
 U64 knight_attacks[NUM_SQ];
 
+const U64 NOT_A_FILE = 0xFEFEFEFEFEFEFEFE;
+const U64 NOT_AB_FILE = 0xFCFCFCFCFCFCFCFC;
+const U64 NOT_H_FILE = 0x7F7F7F7F7F7F7F7F;
+const U64 NOT_GH_FILE = 0x3F3F3F3F3F3F3F3F;
+
 U64 get_west_pawn_attack_mask(int color, int square) {
     return west_pawn_attacks[color][square];
 }

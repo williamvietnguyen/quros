@@ -22,18 +22,10 @@ int get_square_number(int rank, int file) {
     return rank * 8 + file;
 }
 
-int get_rank(int square) {
-    return RANKS - 1 - (square / 8);
-}
-
-int get_file(int square) {
-    return square % 8;
-}
-
 void print_bitboard(U64 bitboard) {
     /* lsb: a8, msb: h1 */
-    for (int rank = 0; rank < RANKS; rank++) {
-        for (int file = 0; file < FILES; file++) {
+    for (int rank = RANK_8; rank < RANKS; rank++) {
+        for (int file = FILE_A; file < FILES; file++) {
             if (!file) {
                 printf(" %d   ", 8 - rank);
             }
