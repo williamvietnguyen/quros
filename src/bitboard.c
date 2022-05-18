@@ -1,4 +1,4 @@
-#include "bb.h"
+#include "bitboard.h"
 #include "defs.h"
 #include <stdio.h>
 #include <assert.h>

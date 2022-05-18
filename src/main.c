@@ -1,5 +1,5 @@
 #include "attack.h"
-#include "bb.h"
+#include "bitboard.h"
 #include "defs.h"
 #include "tests.h"
 #include <stdio.h>
@@ -11,7 +11,6 @@ int main(int argc, char** argv) {
         run_tests();
         exit(EXIT_SUCCESS);
     }
-
     init_attacks();
     exit(EXIT_SUCCESS);
 }

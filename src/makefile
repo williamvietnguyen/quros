@@ -1,5 +1,4 @@
 TARGET = main
-TESTS = tests
 LIBS = -lm
 CC = gcc
 CFLAGS = -g -Wall
@@ -7,7 +6,6 @@ CFLAGS = -g -Wall
 .PHONY: default all clean
 
 default: $(TARGET)
-tests: $(TESTS)
 all: default
 
 OBJECTS = $(patsubst %.c, %.o, $(wildcard *.c))
@@ -19,9 +17,6 @@ HEADERS = $(wildcard *.h)
 .PRECIOUS: $(TARGET) $(OBJECTS)
 
 $(TARGET): $(OBJECTS)
-	$(CC) $(OBJECTS) -Wall $(LIBS) -o $@
-
-$(TESTS): $(OBJECTS)
 	$(CC) $(OBJECTS) -Wall $(LIBS) -o $@
 
 clean:

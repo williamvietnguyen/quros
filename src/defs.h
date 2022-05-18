@@ -1,7 +1,7 @@
 #ifndef DEFS_H_
 #define DEFS_H_
 
-#include "bb.h"
+#include "bitboard.h"
 
 /* use this to index bitboard */
 enum {

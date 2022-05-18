@@ -1,6 +1,6 @@
 # Quros
 
-A chess engine being built from scratch in C.
+A chess engine being built from scratch in C. The intention is to make the code readable and maintainable for myself.
 
 ### References, Credit, and Inspiration
 

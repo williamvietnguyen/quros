@@ -1,6 +1,6 @@
 #include "tests.h"
 #include "attack.h"
-#include "bb.h"
+#include "bitboard.h"
 #include "defs.h"
 #include "assert.h"
 #include <stdio.h>
@@ -85,7 +85,17 @@ static void test_knight_attacks() {
     assert(get_knight_attack_mask(E8) == 0x284400);
 }
 
-static void run_bb_tests() {
+static void test_king_attacks() {
+    assert(get_king_attack_mask(E4) == 0x382838000000);
+    assert(get_king_attack_mask(H1) == 0x40C0000000000000);
+    assert(get_king_attack_mask(A1) == 0x203000000000000);
+    assert(get_king_attack_mask(H8) == 0xC040);
+    assert(get_king_attack_mask(A8) == 0x302);
+    assert(get_king_attack_mask(A4) == 0x30203000000);
+    assert(get_king_attack_mask(H4) == 0xC040C0000000);
+}
+
+static void run_bitboard_tests() {
     test_set_bit();
     test_test_bit();
     test_pop_bit();
@@ -98,12 +108,13 @@ static void run_attack_tests() {
     test_pawn_east_attacks();
     test_pawn_west_attacks();
     test_knight_attacks();
+    test_king_attacks();
     printf("Passing attack tests...\n");
 }
 
 void run_tests() {
     printf("\nRunning tests...\n");
-    run_bb_tests();
+    run_bitboard_tests();
     run_attack_tests();
     printf("Passed all tests!\n");
 }

@@ -1,5 +1,5 @@
-#ifndef BB_H_
-#define BB_H_
+#ifndef BITBOARD_H_
+#define BITBOARD_H_
 
 #include <stdint.h>
 
